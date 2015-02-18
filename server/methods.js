@@ -1,7 +1,7 @@
 var	list=["getCategories","getCheckins","postCheckin","getCities","getOpenEvents","getConcierge","getEvents","postEvent","getEventComments","postEventComment","postEventCommentFlag","getEventCommentLikes","getEventRatings","postEventRating","getEventAttendance","takeEventAttendance","getEverywhereComments","postEverywhereComment","getEverywhereCommunities","postEverywhereCommunity","getEverywhereFollows","getEverywhereFollowers","postEverywhereFollow","postEverywhereContainer","getEverywhereContainers","postEverywhereSeed","postEverywhereEvent","getEverywhereEvents","postEverywhereRsvp","getEverywhereRsvps","getEverywhereSeeds","getActivity","getGroups","getComments","getMembers","postMemberPhoto","postMessage","getOEMBed","getOEMBed","getPhotoComments","postPhotoComment","getPhotoAlbums","getPhoto","getPhotos","postPhotoAlbum","postPhoto","getProfiles","postProfiles","postRSVP","getRSVPs","getOpenVenues","getVenues","getTopics"],
 	MeetupMe = Meteor.npmRequire("meetup-api");
-	var api_key = Meteor.settings[Meteor.settings.environment].meetup.api_key;
-	var group_urlname = Meteor.settings[Meteor.settings.environment].meetup.group_urlname;
+	var api_key = Meteor.settings[Meteor.settings.environment]? Meteor.settings[Meteor.settings.environment].meetup.api_key : null;
+	var group_urlname = Meteor.settings[Meteor.settings.environment]? Meteor.settings[Meteor.settings.environment].meetup.group_urlname : null;
 	var meetup = new MeetupMe(api_key);
   var AsyncMeetup = Async.wrap(meetup, list);
 
@@ -10,10 +10,10 @@ Meteor.methods({
 		switch(endpoint){
 		case "getEvents":
 			return AsyncMeetup.getEvents(param);
-			break
+			break;
 		case "getProfiles":
 			return AsyncMeetup.getProfiles(param);
-			break
+			break;
 		case "getRSVPs":
 			return AsyncMeetup.getRSVPs(param);
 			break
