@@ -1,6 +1,6 @@
 # Meteor Meetup Website
 
-This is a Meteor App that can be used to organize, manage, and market your Meetup group. It was built by the [Meteor St Louis Meetup Group](http://stl.meteor.com).
+This is a Meteor App that can be used to organize, manage, and market your Meetup group. It was forked by the [Meteor St Louis Meetup Group](http://stl.meteor.com).
 
 * [Features Overview](#features-overview)
 * [How To Install](#how-to-install)
