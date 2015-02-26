@@ -271,6 +271,17 @@ Meteor.methods({
 		});
 	},
 
+	unVoteOnTopic: function(topic) {
+		var points = topic.points - 1;
+		Topics.update({_id: topic._id}, {$set: {points: points}});
+		Meteor.users.update({_id: Meteor.userId()}, {$pull: {'profile.votedTopicIds': topic._id}});
+
+		Activities.remove({
+			userId: Meteor.userId(),
+			subjectId: topic._id
+		});
+	},
+
 	likePresentation: function(presentation) {
 		Meteor.users.update({_id: Meteor.userId()}, { $addToSet: {'profile.likedItemIds' : presentation._id} } );
 

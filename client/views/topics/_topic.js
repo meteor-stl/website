@@ -23,6 +23,20 @@ Template._topic.events({
     }
   },
 
+  'click [data-unvote]': function(event, template) {
+    event.preventDefault();
+
+    if (!Meteor.user()) {
+      alert("Log in with Meetup to vote!");
+      return false;
+    }
+
+    var alreadyVoted = _(Meteor.user().profile.votedTopicIds).contains(this._id);
+    if (alreadyVoted) {
+      Meteor.call('unVoteOnTopic', this);
+    }
+  },
+
   'click [data-remove]': function(event, template) {
     event.preventDefault();
 
