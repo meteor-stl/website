@@ -1,6 +1,6 @@
 # Meteor Meetup Website
 
-This is a Meteor App that can be used to organize, manage, and market your Meetup group. It was built by the [Meteor Vegas Meetup Group](http://vegas.meteor.com).
+This is a Meteor App that can be used to organize, manage, and market your Meetup group. It was built by the [Meteor St Louis Meetup Group](http://stl.meteor.com).
 
 * [Features Overview](#features-overview)
 * [How To Install](#how-to-install)
@@ -40,7 +40,7 @@ Members are granted activity points when performing certain activities. These po
 
 ## <a name="how-to-install"></a> How To Install
 
-1. Clone the repo `git clone git@github.com:meteor-vegas/website.git`
+1. Clone the repo `git clone git@github.com:meteor-stl/website.git`
 2. Copy the contents of `settings.example.json` into a new `settings.json` file
 3. Go to [Meetup OAuth Consumers](https://secure.meetup.com/meetup_api/oauth_consumers/) and create 2 new apps, one for development and one for production
 4. Enter the respective keys and secrets into the the `meetup.oauth_key` and `meetup.oauth_secret` keys in `settings.json`
@@ -59,7 +59,7 @@ This app uses Less and Bootstrap for easy customization. Simply change or add Le
 
 Additionally, we make use of [CSS blend modes](http://css-tricks.com/basics-css-blend-modes/) to dynamically change the color of background images based on your `$brand-primary` color. As an example:
 
-![](http://cl.ly/Y6jn/vegas.png =200x102)
+![](http://cl.ly/Y6jn/stl.png =200x102)
 ![](http://cl.ly/Y6d1/london.png =200x102)
 ![](http://cl.ly/Y6j5/cincy.png =200x102)
 
