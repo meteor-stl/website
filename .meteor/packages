@@ -8,6 +8,7 @@ less
 accounts-ui
 accounts-meetup
 iron:router
+multiply:iron-router-progress
 cmather:handlebars-server@0.2.0
 zimme:iron-router-active
 meteorhacks:npm
@@ -25,5 +26,4 @@ mrt:iron-router-progress
 spiderable
 chfritz:easycron
 matb33:collection-hooks
-http
-
+xolvio:cucumber
